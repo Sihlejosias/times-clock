@@ -1,0 +1,19 @@
+{
+  "name": "times-clock",
+  "version": "1.0.0",
+  "description": "An analog and digital clock. Made with electron framework and typescript",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Sihlejosias/times-clock.git"
+  },
+  "author": "Sihle Josias Makhanya",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Sihlejosias/times-clock/issues"
+  },
+  "homepage": "https://github.com/Sihlejosias/times-clock#readme"
+}
