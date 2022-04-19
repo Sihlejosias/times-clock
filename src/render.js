@@ -1,19 +1,33 @@
 window.addEventListener("DOMContentLoaded", () => {
-    let  hr = document.querySelector("#hr");
-    let mn = document.querySelector("#mn");
-    let sc = document.querySelector("#sc");
+    let  hr = document.getElementById("hr");
+    let mn = document.getElementById("mn");
+    let sc = document.getElementById("sc");
 
-    setInterval(function () {
-        let rate = 6;
+    setInterval(() => {
+        var ss = 0;
+        var mm = 0;
+        var hh = 0; 
 
-        let day = new Date();
-        let hh = day.getHours() * 30;
-        let mm = day.getMinutes() * rate;
-        let ss = day.getSeconds() * rate;
+        var day = new Date();
 
-        hr.style.transform = "rotatez(${hh+(mm/12)}deg)";
-        mn.style.transform = "rotatez(${mm}deg)";
-        sc.style.transform = "rotatez(${ss}deg)";
+        ss = day.getSeconds() * 6;
+        mm = day.getMinutes() * 6;
+        hh = day.getHours() * 30 + Math.round(mm / 12);
+
+        hr.style.transform = "rotate(" + hh + "deg)";
+        mn.style.transform = "rotate(" + mm + "deg)";
+        sc.style.transform = "rotate(" + ss + "deg)";
+
+        // let rate = 6;
+
+        // day = new Date();
+        // hh = day.getHours() * 30;
+        // mm = day.getMinutes() * rate;
+        // ss = day.getSeconds() * rate;
+
+        // hr.style.transform = 'rotatez(${(hh)+(mm/12)}deg)';
+        // mn.style.transform = "rotatez(${mm}deg)";
+        // sc.style.transform = "rotatez(${ss}deg)";
 
         let hours = document.getElementById('hours');
         let minutes = document.getElementById('minutes');
