@@ -5,5 +5,6 @@ To install and run app:
 
 git clone https://github.com/sihlesjosias/times-clock.gi
 cd times-clock
+npm install
 npm start
 

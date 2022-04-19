@@ -2,6 +2,7 @@
 <html>
   <head>
     <meta charset="UTF-8" />
+    <meta http-equiv="Content-Security-Policy" content="script-src 'self';" />
     <title>Clock</title>
     <link rel="stylesheet" href="./index.css" />
   </head>
@@ -26,8 +27,15 @@
         <span style="--i:11;"><b>11</b></span>
         <span style="--i:12;"><b>12</b></span>
       </div>
-    </div>
 
+      <!-- digital -->
+      <div id="time">
+        <div id="hours">00</div>
+        <div id="minutes">00</div>
+        <div id="seconds">00</div>
+        <div id="ampm">AM</div>
+      </div>
+    </div>
     <script type="text/javascript" src="./render.js"></script>
   </body>
 </html>
