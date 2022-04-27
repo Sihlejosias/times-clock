@@ -4,30 +4,17 @@ window.addEventListener("DOMContentLoaded", () => {
     let sc = document.getElementById("sc");
 
     setInterval(() => {
-        var ss = 0;
-        var mm = 0;
-        var hh = 0; 
 
-        var day = new Date();
+        let rate = 6;
 
-        ss = day.getSeconds() * 6;
-        mm = day.getMinutes() * 6;
-        hh = day.getHours() * 30 + Math.round(mm / 12);
+        day = new Date();
+        hh = day.getHours() * 30;
+        mm = day.getMinutes() * rate;
+        ss = day.getSeconds() * rate;
 
-        hr.style.transform = "rotate(" + hh + "deg)";
-        mn.style.transform = "rotate(" + mm + "deg)";
-        sc.style.transform = "rotate(" + ss + "deg)";
-
-        // let rate = 6;
-
-        // day = new Date();
-        // hh = day.getHours() * 30;
-        // mm = day.getMinutes() * rate;
-        // ss = day.getSeconds() * rate;
-
-        // hr.style.transform = 'rotatez(${(hh)+(mm/12)}deg)';
-        // mn.style.transform = "rotatez(${mm}deg)";
-        // sc.style.transform = "rotatez(${ss}deg)";
+        hr.style.transform = `rotatez(${(hh)+(mm/12)}deg)`;
+        mn.style.transform = `rotatez(${mm}deg)`;
+        sc.style.transform = `rotatez(${ss}deg)`;
 
         let hours = document.getElementById('hours');
         let minutes = document.getElementById('minutes');
